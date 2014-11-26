@@ -1,14 +1,17 @@
 #Markdown基本语法
 
+tags: markdown
+
 >**Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档.**
 
-### 1. 粗体和斜体(文字两边均添加`**`和`*`分别代表文字粗体和斜体)
+### 1. 粗体和斜体(文字两边均添加`**`和`*`分别代表文字粗体和斜体，或者用下划线_替换星号*，效果一样)
 
-语法：`**粗体**` 
-效果： **效果**
-
-语法：`*斜体*`
-效果： *斜体*
+|       |   语法   | 效果   |
+| ----- | :-----:  | -----  |
+|粗体   |`**粗体**`|**粗体**|
+|       |`__粗体__`|__粗体__|
+|斜体   |` *斜体* `| *斜体* |
+|       |` _斜体_ `| _斜体_ |
 
 ----------
 
@@ -93,9 +96,9 @@
 
 效果：
 
-1. 有序列表第一行
+10. 有序列表第一行
 2. 有序列表第二行
-3. 有序列表第三行
+4. 有序列表第三行
 
 ----------
 
@@ -165,6 +168,8 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, OnStreamjn
 I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRenderjni.cpp, NativeAudioRender, 124, ENCODING_PCM_8BIT is 3
 ```
 
+----------
+
 ### 10. 插入表格
 示例：
 ```
@@ -182,3 +187,47 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 | Sony C6833 | OK(3/3)   | NG(3/3) |
 | S5         | OK(3/3)   | OK(3/3) |
 | Tab S      | OK(3/3)   | OK(3/3) |
+
+----------
+
+### 11. 制作流程图(咦，貌似不管用哦)
+
+
+#### 示例
+
+```flow
+st=>start: Start:>https://www.zybuluo.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
+
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
+```
+
+
+~~删除文本~~
+
+You can also render sequence diagrams like this:
+
+```sequence
+Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!
+```
+
+----------
+
+### 12. 插入图片
+使用 \!\[描述](图片链接地址) 插入图像。
+
+示例：
+```
+![someImage](http://i11.topit.me/t/201011/21/12903377832384.jpg)
+```
+
+效果：
+![someImage](http://i11.topit.me/t/201011/21/12903377832384.jpg)
