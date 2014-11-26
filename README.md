@@ -7,7 +7,7 @@ tags: markdown
 ### 1. 粗体和斜体(文字两边均添加`**`和`*`分别代表文字粗体和斜体，或者用下划线_替换星号*，效果一样)
 
 |       |   语法   | 效果   |
-| ----- | :-----:  | -----  |
+| ----- | :-----   | -----  |
 |粗体   |`**粗体**`|**粗体**|
 |       |`__粗体__`|__粗体__|
 |斜体   |` *斜体* `| *斜体* |
@@ -127,9 +127,15 @@ tags: markdown
 
 ### 8.  代码块
 
-使用 四个缩进空格 表示代码块。
+在文本前面使用**四个缩进空格**表示代码块。
 
 示例：
+
+```
+    这是一个代码块，此行左侧有四个不可见的空格。
+```
+
+效果：
 
     这是一个代码块，此行左侧有四个不可见的空格。
 
@@ -174,7 +180,7 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 示例：
 ```
 | V2         | Ericsson  | TVB     |
-| --------   |  -----:   |  :----  |
+| --------   |  -----    |  :----  |
 | Sony C6833 | OK(3/3)   | NG(3/3) |
 | S5         | OK(3/3)   | OK(3/3) |
 | Tab S      | OK(3/3)   | OK(3/3) |
@@ -183,7 +189,7 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 效果：
 
 | V2         | Ericsson  | TVB     |
-| --------   |  -----:   |  :----  |
+| --------   |  -----    |  :----  |
 | Sony C6833 | OK(3/3)   | NG(3/3) |
 | S5         | OK(3/3)   | OK(3/3) |
 | Tab S      | OK(3/3)   | OK(3/3) |
@@ -193,31 +199,30 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 ### 11. 制作流程图(咦，貌似不管用哦)
 
 
-#### 示例
+~~#### 示例~~
 
-```flow
-st=>start: Start:>https://www.zybuluo.com
-io=>inputoutput: verification
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-sub=>subroutine: Your Subroutine
-e=>end
+~~```flow~~
+~~st=>start: Start:>https://www.zybuluo.com~~
+~~io=>inputoutput: verification~~
+~~op=>operation: Your Operation~~
+~~cond=>condition: Yes or No?~~
+~~sub=>subroutine: Your Subroutine~~
+~~e=>end~~
 
-st->io->op->cond
-cond(yes)->e
-cond(no)->sub->io
-```
-
+~~st->io->op->cond~~
+~~cond(yes)->e~~
+~~cond(no)->sub->io~~
+~~```~~
 
 ~~删除文本~~
 
 You can also render sequence diagrams like this:
 
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
+~~```sequence~~
+~~Alice->Bob: Hello Bob, how are you?~~
+~~Note right of Bob: Bob thinks~~
+~~Bob-->Alice: I am good thanks!~~
+~~```~~
 
 ----------
 
@@ -226,8 +231,37 @@ Bob-->Alice: I am good thanks!
 
 示例：
 ```
-![someImage](http://i11.topit.me/t/201011/21/12903377832384.jpg)
+![矮油](http://imglf2.ph.126.net/6Z1wsk_hoLBcHYGrXqFdNw==/1395552934631794682.jpg)
 ```
 
 效果：
-![someImage](http://i11.topit.me/t/201011/21/12903377832384.jpg)
+![矮油](http://imglf1.ph.126.net/KjxainSP-KGzT0wDFnaBxA==/1152921504624478357.gif)
+
+----------
+
+### 13. 插入公式
+
+$$E=mc^2$$
+
+
+
+第一个标题
+
+: 子标题1
+: 子标题2
+
+第二个标题
+: 子标题21
+: 子标题22
+
+| Extension | Documentation |
+|-----------|---------------|
+| magiclink | Find and convert HTML links and email address to links ([MagicLink Documentation](http://facelessuser.github.io/PyMdown/Extensions/MagicLink.html)). |
+| delete | Surround inline text with `~~crossed out~~` to get del tags ~~crossed out~~. |
+| insert | Surround inline text with `^^underlined^^` to get ins tags <ins>underlined</ins>. |
+| tasklist | Github Flavored Markdown tasklists ([Tasklist Documentation](http://facelessuser.github.io/PyMdown/Extensions/Tasklist.html)). |
+| githubemoji | Support for Github Flavored Markdown emojis ([GithubEmoji Documentation](http://facelessuser.github.io/PyMdown/Extensions/GithubEmoji.html)). |
+| headeranchor | Github Flavored Markdown style header anchors ([HeaderAnchor Documentation](http://facelessuser.github.io/PyMdown/Extensions/HeaderAnchor.html)). |
+| github | A convenience extension to add: `magiclink`, `delete`, `tasklist`, `githubemoji`, `headeranchor`, `superfences`, and `nl2br` to parse and display Markdown in a github-ish way.  It is recommed to pair `github` with `extra` and `codehilite` (with language guessing off) to parse close to github's way.  Be aware of what extensions `github` loads, because you should not load extensions more than once. |
+| progressbar | Create progress bars ([ProgressBar Documentation](http://facelessuser.github.io/PyMdown/Extensions/ProgressBar.html)). |
+| superfences | Allow fenced blocks to be nested under lists, blockquotes, etc. and add special UML diagram blocks ([SuperFences Documentation](http://facelessuser.github.io/PyMdown/Extensions/SuperFences.html)). |
