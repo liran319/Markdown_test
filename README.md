@@ -1,10 +1,11 @@
+[TOC]
+
 #Markdown基本语法
 
-tags: markdown
 
 >**Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档.**
 
-### 1. 粗体和斜体(文字两边均添加`**`和`*`分别代表文字粗体和斜体，或者用下划线_替换星号*，效果一样)
+## 1. 粗体和斜体(文字两边均添加`**`和`*`分别代表文字粗体和斜体，或者用下划线_替换星号*，效果一样)
 
 |       |   语法   | 效果   |
 | ----- | :-----   | -----  |
@@ -15,7 +16,7 @@ tags: markdown
 
 ----------
 
-### 2. 分级标题
+## 2. 分级标题
 
 使用 === 表示一级标题，使用 --- 表示二级标题。
 
@@ -29,24 +30,14 @@ tags: markdown
 ---
 
 ### 这是一个三级标题
+
 ```
 
-效果：
-
-这是一个一级标题
-===
-
-这是一个二级标题
----
-
-### 这是一个三级标题
-
-
-你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4, 以此类推。
+你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4, ##### H5, ###### H6。
 
 ----------
 
-### 3. 外链接
+## 3. 外链接
 
 使用 `[描述](链接地址)`为文字增加外链接。
 
@@ -56,7 +47,7 @@ tags: markdown
 
 ----------
 
-### 4. 无序列表
+## 4. 无序列表
 
 使用 *，+，- 表示无序列表。
 
@@ -82,7 +73,7 @@ tags: markdown
 
 ----------
 
-### 5. 有序列表
+## 5. 有序列表
 
 使用数字和点表示有序列表。
 
@@ -102,7 +93,7 @@ tags: markdown
 
 ----------
 
-### 6. 文字引用
+## 6. 文字引用
 
 使用 > 表示文字引用。
 
@@ -115,7 +106,7 @@ tags: markdown
 
 ----------
 
-### 7. 行内代码块
+## 7. 行内代码块
 
 使用 \`代码` 表示行内代码块。
 
@@ -125,7 +116,7 @@ tags: markdown
 
 ----------
 
-### 8.  代码块
+## 8.  代码块
 
 在文本前面使用**四个缩进空格**表示代码块。
 
@@ -141,7 +132,7 @@ tags: markdown
 
 ----------
 
-### 9. 高亮代码(用三个连续的\`来将代码内容包括起来)
+## 9. 高亮代码(用三个连续的\`来将代码内容包括起来)
 示例语法：
 
     ```
@@ -176,7 +167,7 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 
 ----------
 
-### 10. 插入表格
+## 10. 插入表格
 示例：
 ```
 | V2         | Ericsson  | TVB     |
@@ -196,54 +187,116 @@ I/VOLOG   (32481): 17:59:48.535 @@@VOLOG,   Info, 09030000, 4006AFFC, voAudioRen
 
 ----------
 
-### 11. 制作流程图(咦，貌似不管用哦)
+## 11. 制作流程图(咦，貌似intranet暂时还不支持哦)
 
 
-~~#### 示例~~
+### 示例(流程图)
 
-~~```flow~~
-~~st=>start: Start:>https://www.zybuluo.com~~
-~~io=>inputoutput: verification~~
-~~op=>operation: Your Operation~~
-~~cond=>condition: Yes or No?~~
-~~sub=>subroutine: Your Subroutine~~
-~~e=>end~~
+<code type="text"> ```flow
+st=>start: Start:>https://www.visualon.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
 
-~~st->io->op->cond~~
-~~cond(yes)->e~~
-~~cond(no)->sub->io~~
-~~```~~
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
+```</code>
 
-~~删除文本~~
+效果：
+```flow
+st=>start: Start:>https://www.visualon.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
 
-You can also render sequence diagrams like this:
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
+```
 
-~~```sequence~~
-~~Alice->Bob: Hello Bob, how are you?~~
-~~Note right of Bob: Bob thinks~~
-~~Bob-->Alice: I am good thanks!~~
-~~```~~
+
+
+### 示例(序列图):
+
+<code type="text"> \```sequence
+Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!
+\```</code>
+
+效果:
+```sequence
+Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!
+```
 
 ----------
 
-### 12. 插入图片
+## 12. 插入图片
 使用 \!\[描述](图片链接地址) 插入图像。
 
 示例：
 ```
-![矮油](http://imglf2.ph.126.net/6Z1wsk_hoLBcHYGrXqFdNw==/1395552934631794682.jpg)
+![江之岛电铁](http://imglf2.ph.126.net/DyWALBfHb7PSyUqMPESDTw==/6597853718448284621.jpg)
 ```
 
 效果：
-![矮油](http://imglf1.ph.126.net/KjxainSP-KGzT0wDFnaBxA==/1152921504624478357.gif)
 
+![江之岛电铁](http://imglf2.ph.126.net/DyWALBfHb7PSyUqMPESDTw==/6597853718448284621.jpg)
+
+
+PS:还能插入动态图哟~
+
+`![some](http://imglf2.ph.126.net/W7TBmdEpqKMeECQvBiV46w==/6608237506259818976.gif)`
+![马尔基西奥](http://ww4.sinaimg.cn/bmiddle/76acabebjw1ehpf4onxg5g20b40fg7wi.gif)
 ----------
 
-### 13. 插入公式
+## 13. 插入公式
 
 $$E=mc^2$$
 
 
+$$2H_2 + O_2 = 2H_2O$$
+
+$$\theta$$
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+$$\left(\frac12\right)$$
+
+-----------
+
+## 14. 删除线
+
+示例：
+`~~这句话上面应该有删除线~~`
+
+效果：
+~~这句话上面应该有删除线~~
+
+----------
+
+## 15. Definition Lists
+
+示例：
+```
+第一个标题
+
+: 子标题1
+: 子标题2
+
+第二个标题
+: 子标题21
+: 子标题22
+```
+
+效果：
 
 第一个标题
 
@@ -254,14 +307,3 @@ $$E=mc^2$$
 : 子标题21
 : 子标题22
 
-| Extension | Documentation |
-|-----------|---------------|
-| magiclink | Find and convert HTML links and email address to links ([MagicLink Documentation](http://facelessuser.github.io/PyMdown/Extensions/MagicLink.html)). |
-| delete | Surround inline text with `~~crossed out~~` to get del tags ~~crossed out~~. |
-| insert | Surround inline text with `^^underlined^^` to get ins tags <ins>underlined</ins>. |
-| tasklist | Github Flavored Markdown tasklists ([Tasklist Documentation](http://facelessuser.github.io/PyMdown/Extensions/Tasklist.html)). |
-| githubemoji | Support for Github Flavored Markdown emojis ([GithubEmoji Documentation](http://facelessuser.github.io/PyMdown/Extensions/GithubEmoji.html)). |
-| headeranchor | Github Flavored Markdown style header anchors ([HeaderAnchor Documentation](http://facelessuser.github.io/PyMdown/Extensions/HeaderAnchor.html)). |
-| github | A convenience extension to add: `magiclink`, `delete`, `tasklist`, `githubemoji`, `headeranchor`, `superfences`, and `nl2br` to parse and display Markdown in a github-ish way.  It is recommed to pair `github` with `extra` and `codehilite` (with language guessing off) to parse close to github's way.  Be aware of what extensions `github` loads, because you should not load extensions more than once. |
-| progressbar | Create progress bars ([ProgressBar Documentation](http://facelessuser.github.io/PyMdown/Extensions/ProgressBar.html)). |
-| superfences | Allow fenced blocks to be nested under lists, blockquotes, etc. and add special UML diagram blocks ([SuperFences Documentation](http://facelessuser.github.io/PyMdown/Extensions/SuperFences.html)). |
