@@ -43,7 +43,7 @@
 
 示例：
 
-这是去往 [Markdown在线编辑器](https://www.zybuluo.com/mdeditor) 的链接。
+这是去往 [Markdown在线编辑器](https://stackedit.io/editor) 的链接。
 
 ----------
 
@@ -230,6 +230,7 @@ Bob-->Alice: I am good thanks!
 \```</code>
 
 效果:
+
 ```sequence
 Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
@@ -264,11 +265,10 @@ $$E=mc^2$$
 
 $$2H_2 + O_2 = 2H_2O$$
 
-$$\theta$$
+$$r = a(1 - sin\theta)$$
 
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
-$$\left(\frac12\right)$$
 
 -----------
 
@@ -287,7 +287,6 @@ $$\left(\frac12\right)$$
 示例：
 ```
 第一个标题
-
 : 子标题1
 : 子标题2
 
@@ -296,17 +295,14 @@ $$\left(\frac12\right)$$
 : 子标题22
 ```
 
-效果：
+效果:
 
 第一个标题
-
-
 : 子标题1
 : 子标题2
 
 
 第二个标题
-
 : 子标题21
 : 子标题22
 
